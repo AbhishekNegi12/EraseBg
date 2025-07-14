@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use('/api/user/webhooks',userRouter)
+app.use('/api/user',userRouter)
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
