@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import EraseLogo from '../assets/EraseLogo.png';
 import { Link } from 'react-router-dom';
-import { useClerk, useUser } from '@clerk/clerk-react';
 
+import { useClerk, useUser, UserButton } from '@clerk/clerk-react';
 
 
 const Navbar = () => {
@@ -32,6 +32,7 @@ const Navbar = () => {
               {user ? (
                 <div className="flex flex-col md:flex-row md:items-center gap-2">
                   <span className="text-black font-semibold text-lg px-2">{user.username || user.firstName || user.emailAddress}</span>
+                  <UserButton afterSignOutUrl="/" />
                   <button
                     onClick={() => signOut()}
                     style={{ backgroundColor: 'black' }}
