@@ -1,7 +1,6 @@
 import  'dotenv/config'
 import cors from 'cors'
 import connectDB from './configs/mongodb.js'
-
 // New (ESM)
 import express from 'express';
 import userRouter from './routes/userRoutes.js';
